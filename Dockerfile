@@ -1,5 +1,8 @@
 FROM ubuntu AS builder
 
+LABEL autodelete="true"
+LABEL project="openssl"
+
 ENV OPENSSL_VERSION=openssl-1.1.1i
 
 RUN apt -y update && apt -y install build-essential checkinstall zlib1g-dev wget
